@@ -10,9 +10,7 @@ session_start() ?>
     <title>Ukom</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
@@ -68,7 +66,7 @@ session_start() ?>
             <!-- User is not logged in, so show Login and Register links -->
             <a class="nav-link for-not-logged-in" href="login.php">Login</a>
             <a class="nav-link for-not-logged-in" href="register.php">Register</a>
-            <?php endif; ?>
+            <?php endif; ?>`
     </div>
     <div class="right">
         <div class="search">
@@ -80,14 +78,14 @@ session_start() ?>
         <?php endif; ?>
         <?php if (isset($_SESSION['username'])): ?>
             <div class="dropdown">
-                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <?= ucwords($_SESSION['username']) ?>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="?url=logout">Logout</a></li>
-                    <li><a class="dropdown-item" href="?url=profile">Profile</a></li>                        
-                </ul>
-            </div>
+            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <?= ucwords($_SESSION['username']) ?>
+            </a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="?url=logout">Logout</a></li>
+        <li><a class="dropdown-item" href="?url=profile">Profile</a></li>                        
+    </ul>
+</div>
         <?php endif; ?>
     </div>
 </div>
@@ -119,7 +117,10 @@ session_start() ?>
         include 'page/home.php';
     }
 ?>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-Xr2EAgHtP9b3hTPCvAg/J2IwL2oTOU9ulBy+1CKWwSX5C1ojA0JfAZLmZhp4z3Xr" crossorigin="anonymous"></script>
+
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
